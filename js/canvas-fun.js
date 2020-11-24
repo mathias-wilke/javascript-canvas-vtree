@@ -109,8 +109,10 @@ resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
 //this block will call the function clear, update, and draw all the time
-window.setInterval(function(){
+function loop(){
     clear();
     update();
     draw();
-  }, 1);
+    window.requestAnimationFrame(loop);
+}
+window.requestAnimationFrame(loop);
