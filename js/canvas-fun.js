@@ -19,6 +19,7 @@ function draw(){
     ctx.fillText("Depth: " + recursion, 0, 40); 
     ctx.fillText("Angle: " + angle, 0, 30); 
     ctx.fillText("Lenght: " + lenght, 0, 50); 
+    ctx.fillText("https://github.com/mathias-wilke/javascript-canvas-vtree.git", 0, canvas.height - 4); 
 
     //set the new center
     ctx.translate(canvas.width / 2, canvas.height / 2);
@@ -62,7 +63,7 @@ function drawTree(j, angle, lenght){
 
 //generate a color
 function rainbow(numOfSteps, step) {
-    if(document.getElementById("colors").value == 0){
+    if(document.getElementById("colors").checked == 0){
         return "#FFFFFF";
     }
 	var r, g, b;
@@ -99,8 +100,7 @@ function clear(){
 //if the user changes the size of the window we have do recalculate
 function resizeCanvas(){
     canvas.width = window.innerWidth - 20;
-    //let us keep this sixteen by nine
-    canvas.height = ((window.innerWidth) / 16) * 9;
+    canvas.height = window.innerHeight - 20;
 }
 
 //let us call the function once at the start to get the user's canvas size
