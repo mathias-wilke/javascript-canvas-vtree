@@ -14,12 +14,12 @@ function draw(){
     //draw some stats and the title to the canvas
     ctx.fillStyle = "white";
     ctx.font = "20px Arial";
-    ctx.fillText("JavaScript Canvas V-Tree", 0, 15); 
+    ctx.fillText("JavaScript Canvas V-Tree", 5, canvas.height - 60); 
     ctx.font = "10px Arial";
-    ctx.fillText("Depth: " + recursion, 0, 40); 
-    ctx.fillText("Angle: " + angle, 0, 30); 
-    ctx.fillText("Lenght: " + lenght, 0, 50); 
-    ctx.fillText("https://github.com/mathias-wilke/javascript-canvas-vtree.git", 0, canvas.height - 4); 
+    ctx.fillText("Depth: " + recursion, 5, canvas.height - 50); 
+    ctx.fillText("Angle: " + angle, 5, canvas.height - 40); 
+    ctx.fillText("Lenght: " + lenght, 5, canvas.height - 30); 
+    ctx.fillText("https://github.com/mathias-wilke/javascript-canvas-vtree.git", 5, canvas.height - 10); 
 
     //set the new center
     ctx.translate(canvas.width / 2, canvas.height / 2);
@@ -99,8 +99,8 @@ function clear(){
 
 //if the user changes the size of the window we have do recalculate
 function resizeCanvas(){
-    canvas.width = window.innerWidth - 20;
-    canvas.height = window.innerHeight - 20;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 }
 
 //let us call the function once at the start to get the user's canvas size
